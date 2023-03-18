@@ -29,10 +29,16 @@ public class PrimeTests
     }
 
     [Test]
-    public void PrimeFactorsOf4()
+    public void PrimeFactorsOf4to7()
     {
         var primeFactors = new PrimeFactors();
         var result = primeFactors.Generate(4);
         Assert.That(result, Is.EqualTo(new List<int> { 2, 2 }));
+        result = primeFactors.Generate(5);
+        Assert.That(result, Is.EqualTo(new List<int> { 5 }));
+        result = primeFactors.Generate(6);
+        Assert.That(result, Is.EqualTo(new List<int> { 2, 3 }));
+        result = primeFactors.Generate(7);
+        Assert.That(result, Is.EqualTo(new List<int> { 7 }));
     }
 }
