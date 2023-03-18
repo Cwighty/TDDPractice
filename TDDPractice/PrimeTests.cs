@@ -13,10 +13,18 @@ public class PrimeTests
     }
 
     [Test]
-   public void PrimeFactorsOf2()
+    public void PrimeFactorsOf2()
     {
         var primeFactors = new PrimeFactors();
         var result = primeFactors.Generate(2);
         Assert.That(result, Contains.Item(2));
+    }
+
+    [Test]
+    public void PrimeFactorsOf3()
+    {
+        var primeFactors = new PrimeFactors();
+        var result = primeFactors.Generate(3);
+        Assert.That(result, Contains.Item(3));
     }
 }
