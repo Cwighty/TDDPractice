@@ -17,7 +17,7 @@ public class PrimeTests
     {
         var primeFactors = new PrimeFactors();
         var result = primeFactors.Generate(2);
-        Assert.That(result, Contains.Item(2));
+        Assert.That(result, Is.EqualTo(new List<int> { 2 }));
     }
 
     [Test]
@@ -26,5 +26,13 @@ public class PrimeTests
         var primeFactors = new PrimeFactors();
         var result = primeFactors.Generate(3);
         Assert.That(result, Contains.Item(3));
+    }
+
+    [Test]
+    public void PrimeFactorsOf4()
+    {
+        var primeFactors = new PrimeFactors();
+        var result = primeFactors.Generate(4);
+        Assert.That(result, Is.EqualTo(new List<int> { 2, 2 }));
     }
 }
