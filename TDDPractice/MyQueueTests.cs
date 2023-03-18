@@ -2,7 +2,7 @@ using MyCollections;
 
 namespace TDDPractice
 {
-    public class Tests
+    public class MyQueueTests
     {
         [SetUp]
         public void Setup()
