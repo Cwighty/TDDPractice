@@ -1,11 +1,12 @@
-namespace MyCollections
-{
+namespace MyCollections;
 
-    public class PrimeFactors
+public class PrimeFactors
+{
+    public List<int> Generate(int number)
     {
-        public List<int> Generate(int number)
-        {
-            return new List<int>();
-        }
+        var result = new List<int>();
+        if (number > 1)
+            result.Add(2);
+        return result;
     }
 }
